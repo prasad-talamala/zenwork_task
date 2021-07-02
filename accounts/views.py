@@ -160,6 +160,7 @@ def get_profile(request):
     return JsonResponse(user_details, safe=False)
 
 
+@csrf_exempt
 def crawl_pdf(request):
     if request.method == "POST":
         url = request.POST.get("pdf_url")
