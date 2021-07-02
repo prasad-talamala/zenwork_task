@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}<title>Sample App | Profile</title>{% endblock title %}
+{% block heading %}<a class="navbar-brand" href="{% url 'profile' %}">Sample App</a>{% endblock heading %}
+{% block content %}
+
+<script>
+    $(document).ready(function () {
+        $('#save_button').hide();
+        $('#cancel_button').hide();
+        $('#edit_button').on('click',function () {
+            $('#save_button').show();
+            $('#cancel_button').show();
+            $('#p_tag_id').hide();
+            $('#save_button').prop({'disabled':false});
+            $('#cancel_button').prop({'disabled':false});
+
+            $('#first_name').prop('disabled', false);
+            $('#last_name').prop('disabled', false);
+            $('#email').prop('disabled', false);
+            $('#address_line_1').prop('disabled', false);
+            $('#address_line_2').prop('disabled', false);
+            $('#city').prop('disabled', false);
+            $('#state').prop('disabled', false);
+            $('#pin_code').prop('disabled', false);
+
+        });
+        $('#cancel_button').on('click',function () {
+            $('#save_button').hide();
+            $('#cancel_button').hide();
+            $('#p_tag_id').show();
+            $('#save_button').prop('disabled', true);
+            $('#cancel_button').prop('disabled', true);
+
+            $('#first_name').prop('disabled', true);
+            $('#last_name').prop('disabled', true);
+            $('#email').prop('disabled', true);
+            $('#address_line_1').prop('disabled', true);
+            $('#address_line_2').prop('disabled', true);
+            $('#city').prop('disabled', true);
+            $('#state').prop('disabled', true);
+            $('#pin_code').prop('disabled', true);
+        });
+    });
+
+
+
+</script>
+
+<style>
+    p{
+        cursor: pointer;
+        text-align: left;
+    }
+
+</style>
+
+<div class="row justify-content-center mt-10">
+
+    <div>
+        <img src="{% static 'icons/user.png' %}" alt="{{ user_data.created_by }}" style="width:30px; height:30px">
+        {% if user_data.first_name %}
+            {% if user_data.last_name %}
+            <strong style="color:blue" class="btn btn-outline-info disabled">{{ user_data.first_name }} {{ user_data.last_name }} </strong>
+            {% endif %}
+        {% else %}
+            Name not available..
+        {% endif %}
+
+    </div>
+
+    <br><br>
+
+    <div class="col-md-12">
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="userid">User ID</span>
+                <input type="text" class="form-control" placeholder="User ID" aria-label="User ID"
+                       aria-describedby="userid" value="{{ user_data.id }}" disabled>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="username">Username</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                       aria-describedby="username" value="{{ user_data.username }}" disabled>
+            </div>
+
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Firstname</span>
+                <input id="first_name" type="text" class="form-control" placeholder="No Firstname"
+                       aria-label="Firstname"
+                       name="first_name" value="{{ user_data.first_name }}" disabled>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Lastname</span>
+                <input id="last_name" type="text" class="form-control" placeholder="No Lastname" aria-label="Lastname"
+                       name="last_name" value="{{ user_data.last_name }}" disabled>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Email</span>
+                <input id="email" type="text" class="form-control" placeholder="No Email" aria-label="Email"
+                       name="email" value="{{ user_data.email }}" disabled>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Address 1</span>
+                <input id="address_line_1" type="text" class="form-control" placeholder="Address 1" aria-label="Address 1"
+                       name="address_line_1" aria-describedby="address_line_1" value="{{ user_profile.address_line_1 }}" disabled>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Address 2</span>
+                <input id="address_line_2" type="text" class="form-control" placeholder="Address 2" aria-label="Address 2"
+                       name="address_line_2" aria-describedby="address_line_2" value="{{ user_profile.address_line_2 }}" disabled>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">City</span>
+                <input id="city" type="text" class="form-control" placeholder="City" aria-label="City"
+                       name="city" aria-describedby="city" value="{{ user_profile.city }}" disabled>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">State</span>
+                <input id="state" type="text" class="form-control" placeholder="State" aria-label="State"
+                       name="state" aria-describedby="state" value="{{ user_profile.state }}" disabled>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Pincode</span>
+                <input id="pin_code" type="number" class="form-control" placeholder="Pincode" aria-label="Pincode"
+                       name="pin_code" aria-describedby="pin_code" value="{{ user_profile.pin_code }}" disabled>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="date_joined">Date Joined</span>
+                <input type="text" class="form-control" placeholder="Date Joined" aria-label="Date Joined"
+                       aria-describedby="date_joined" value="{{ user_data.date_joined }}" disabled>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="last_login">Last Login</span>
+                <input type="text" class="form-control" placeholder="Last Login" aria-label="Last Login"
+                       aria-describedby="last_login" value="{{ user_data.last_login }}" disabled>
+            </div>
+
+
+            <button id="save_button" type="submit" class="btn btn-success" style="cursor:pointer;" disabled>Save
+            </button>
+            <button id="cancel_button" class="btn btn-warning" disabled>Cancel</button>
+
+        </form>
+    </div>
+    <h3 id="p_tag_id">Do you want to edit your data ?
+        <a id="edit_button"><i class="fa fa-pencil-square" style="color:red; cursor: pointer;" aria-hidden="true"></i></a></h3>
+</div>
+
+{% endblock %}

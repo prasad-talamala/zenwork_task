@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Sample App | Crawl PDF</title>{% endblock title %}
+{% block heading %}<a class="navbar-brand" href="{% url 'home' %}">Sample App</a>{% endblock heading %}
+
+
+{% block content %}
+
+<form method="POST">
+
+    {% csrf_token %}
+    <div>
+        <label>Enter the PDF url: </label>
+        <input type="url" class="form-control" name="pdf_url">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-outline-primary"> Extract</button>
+
+</form>
+<br>
+{% if content %}
+<h3 class="text-center"> PDF Content </h3>
+<br>
+<div class="col-sm-9 table-responsive" style="height:380px;overflow:auto;">
+    {% for each_line in content %}
+    <p> {{ each_line }} </p>
+    {% endfor %}
+</div>
+<br>
+<br>
+<h3 class="text-center"> PDF Metadata </h3>
+<br>
+<div class="col-sm-9 table-responsive" style="height:380px;overflow:auto;">
+
+    {% for k in metadata %}
+    <p> {{ k.0 }} : {{ k.1 }} </p>
+    {% endfor %}
+</div>
+{% endif %}
+{% endblock content %}

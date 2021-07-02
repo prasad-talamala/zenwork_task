@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Sample App | Home</title>{% endblock title %}
+{% block heading %}<a class="navbar-brand" href="{% url 'home' %}">Sample App</a>{% endblock heading %}
+
+
+{% block content %}
+
+Here is the <strong style="color:red">Sample Application</strong> to register / login / generate auth token
+<br><br>
+<p> To get started, please <a href="{% url 'login' %}"> Log In </a></p>
+
+<p> If you dont have account, then <a href="{% url 'register' %}"> Sign up</a></p>
+<br>
+<br>
+
+<p> > Crawl the PDF <a href="{% url 'crawl_pdf' %}"> here</a></p>
+
+{% endblock content %}

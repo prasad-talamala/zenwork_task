@@ -1,0 +1,185 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="32">
+            <item index="0" class="java.lang.String" itemvalue="%}" />
+            <item index="1" class="java.lang.String" itemvalue="form.message.value" />
+            <item index="2" class="java.lang.String" itemvalue="}}" />
+            <item index="3" class="java.lang.String" itemvalue="form.message" />
+            <item index="4" class="java.lang.String" itemvalue="row.message.value" />
+            <item index="5" class="java.lang.String" itemvalue="form.result.value" />
+            <item index="6" class="java.lang.String" itemvalue="row.result" />
+            <item index="7" class="java.lang.String" itemvalue="row.result.value" />
+            <item index="8" class="java.lang.String" itemvalue="cell" />
+            <item index="9" class="java.lang.String" itemvalue="cols" />
+            <item index="10" class="java.lang.String" itemvalue="src" />
+            <item index="11" class="java.lang.String" itemvalue="form.environment.value" />
+            <item index="12" class="java.lang.String" itemvalue="else" />
+            <item index="13" class="java.lang.String" itemvalue="elif" />
+            <item index="14" class="java.lang.String" itemvalue="endif" />
+            <item index="15" class="java.lang.String" itemvalue="value" />
+            <item index="16" class="java.lang.String" itemvalue="form.run_partition.value" />
+            <item index="17" class="java.lang.String" itemvalue="request.get.datesearch" />
+            <item index="18" class="java.lang.String" itemvalue="name" />
+            <item index="19" class="java.lang.String" itemvalue="request.get.vendorname" />
+            <item index="20" class="java.lang.String" itemvalue="align" />
+            <item index="21" class="java.lang.String" itemvalue=".format(row.apollo_status)" />
+            <item index="22" class="java.lang.String" itemvalue="row.jenkins_url" />
+            <item index="23" class="java.lang.String" itemvalue="display" />
+            <item index="24" class="java.lang.String" itemvalue="text-align" />
+            <item index="25" class="java.lang.String" itemvalue="href" />
+            <item index="26" class="java.lang.String" itemvalue="forloop.last" />
+            <item index="27" class="java.lang.String" itemvalue="{%" />
+            <item index="28" class="java.lang.String" itemvalue="custom.css" />
+            <item index="29" class="java.lang.String" itemvalue="todo.important" />
+            <item index="30" class="java.lang.String" itemvalue="%}checked{%" />
+            <item index="31" class="java.lang.String" itemvalue="width" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="21">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="tableheadercolumn" />
+            <item index="7" class="java.lang.String" itemvalue="bootstraptable" />
+            <item index="8" class="java.lang.String" itemvalue="h5" />
+            <item index="9" class="java.lang.String" itemvalue="p" />
+            <item index="10" class="java.lang.String" itemvalue="hr" />
+            <item index="11" class="java.lang.String" itemvalue="div" />
+            <item index="12" class="java.lang.String" itemvalue="date" />
+            <item index="13" class="java.lang.String" itemvalue="searchfield" />
+            <item index="14" class="java.lang.String" itemvalue="bstable" />
+            <item index="15" class="java.lang.String" itemvalue="h3" />
+            <item index="16" class="java.lang.String" itemvalue="a" />
+            <item index="17" class="java.lang.String" itemvalue="option" />
+            <item index="18" class="java.lang.String" itemvalue="link" />
+            <item index="19" class="java.lang.String" itemvalue="style" />
+            <item index="20" class="java.lang.String" itemvalue="i" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="LossyEncoding" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyCompatibilityInspection" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="ourVersions">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="3.6" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="45">
+            <item index="0" class="java.lang.String" itemvalue="pandas" />
+            <item index="1" class="java.lang.String" itemvalue="radarclient" />
+            <item index="2" class="java.lang.String" itemvalue="recertifi" />
+            <item index="3" class="java.lang.String" itemvalue="pytz" />
+            <item index="4" class="java.lang.String" itemvalue="solarflare2" />
+            <item index="5" class="java.lang.String" itemvalue="nuclei-lib" />
+            <item index="6" class="java.lang.String" itemvalue="pytoolkit" />
+            <item index="7" class="java.lang.String" itemvalue="six" />
+            <item index="8" class="java.lang.String" itemvalue="psycopg2-binary" />
+            <item index="9" class="java.lang.String" itemvalue="py-nfa-cli" />
+            <item index="10" class="java.lang.String" itemvalue="shapely" />
+            <item index="11" class="java.lang.String" itemvalue="python-box" />
+            <item index="12" class="java.lang.String" itemvalue="more-itertools" />
+            <item index="13" class="java.lang.String" itemvalue="python-dateutil" />
+            <item index="14" class="java.lang.String" itemvalue="pg8000" />
+            <item index="15" class="java.lang.String" itemvalue="requests" />
+            <item index="16" class="java.lang.String" itemvalue="markupsafe" />
+            <item index="17" class="java.lang.String" itemvalue="pyrsistent" />
+            <item index="18" class="java.lang.String" itemvalue="emails" />
+            <item index="19" class="java.lang.String" itemvalue="time-uuid" />
+            <item index="20" class="java.lang.String" itemvalue="certifi" />
+            <item index="21" class="java.lang.String" itemvalue="word2number" />
+            <item index="22" class="java.lang.String" itemvalue="graphviz" />
+            <item index="23" class="java.lang.String" itemvalue="pyproj" />
+            <item index="24" class="java.lang.String" itemvalue="bumpversion" />
+            <item index="25" class="java.lang.String" itemvalue="gitpython" />
+            <item index="26" class="java.lang.String" itemvalue="xlrd" />
+            <item index="27" class="java.lang.String" itemvalue="area" />
+            <item index="28" class="java.lang.String" itemvalue="python-jenkins" />
+            <item index="29" class="java.lang.String" itemvalue="wrapt" />
+            <item index="30" class="java.lang.String" itemvalue="poster3" />
+            <item index="31" class="java.lang.String" itemvalue="click" />
+            <item index="32" class="java.lang.String" itemvalue="sqlalchemy" />
+            <item index="33" class="java.lang.String" itemvalue="geojson" />
+            <item index="34" class="java.lang.String" itemvalue="jinja2" />
+            <item index="35" class="java.lang.String" itemvalue="pyshp" />
+            <item index="36" class="java.lang.String" itemvalue="backports.functools-lru-cache" />
+            <item index="37" class="java.lang.String" itemvalue="jsonpath-rw-ext" />
+            <item index="38" class="java.lang.String" itemvalue="envelopes" />
+            <item index="39" class="java.lang.String" itemvalue="jsondiff" />
+            <item index="40" class="java.lang.String" itemvalue="jsonpatch" />
+            <item index="41" class="java.lang.String" itemvalue="requests-toolbelt" />
+            <item index="42" class="java.lang.String" itemvalue="urllib3" />
+            <item index="43" class="java.lang.String" itemvalue="pymongo" />
+            <item index="44" class="java.lang.String" itemvalue="neutroncli" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E303" />
+          <option value="E501" />
+          <option value="W605" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+          <option value="N803" />
+          <option value="N802" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyTypeCheckerInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="src.python.neutroncli.commands.connect.user.*" />
+          <option value="prioritisation.maintenance" />
+          <option value="modifying_new_command.maintenance" />
+          <option value="datetime.datetime.timedelta" />
+          <option value="home_loans.datetime" />
+          <option value="supportapp.models.RX_ENV_CHOICES" />
+          <option value="dict.json" />
+          <option value="list.encode" />
+          <option value="common.bots" />
+          <option value="New_L.json_dumps.false" />
+          <option value="New_L.json_dumps.true" />
+          <option value="int.append" />
+          <option value="dict.add" />
+          <option value="dict.encode" />
+          <option value="typing.Iterator.__getitem__" />
+          <option value="int.__getitem__" />
+          <option value="list.extends" />
+          <option value="list.__getitem__" />
+          <option value="str.__setitem__" />
+          <option value="dict.iteritems" />
+          <option value="str.replace" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
