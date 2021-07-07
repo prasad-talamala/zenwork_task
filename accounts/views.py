@@ -10,6 +10,8 @@ from django.http import JsonResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login as auth_login, logout as auth_logout, authenticate
 from django.views.decorators.csrf import csrf_exempt
+from django.core.exceptions import ObjectDoesNotExist
+from nuclei.framework import console
 
 from zenwork.settings import BASE_DIR
 from .models import UserProfile
@@ -76,16 +78,18 @@ def login(request):
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['password']
+        try:
+            user = authenticate(request, username=username, password=password)
+            token = Token.objects.get(user=user).key
 
-        user = authenticate(request, username=username, password=password)
-        token = Token.objects.get(user=user).key
-
-        if user is None:
-            messages.error(request, 'Invalid Login Credentials')
-        else:
-            auth_login(request, user)
-            messages.success(request, 'Login Successful')
-            return redirect("profile")
+            if user is None:
+                messages.error(request, 'Invalid Login Credentials')
+            else:
+                auth_login(request, user)
+                messages.success(request, 'Login Successful')
+                return redirect("profile")
+        except ObjectDoesNotExist:
+            messages.error(request, "Invalid Login Credentials")
 
     if request.user.is_authenticated:
         messages.warning(request, "User logged in. please logout and try login!")
@@ -164,7 +168,7 @@ def get_profile(request):
 def crawl_pdf(request):
     if request.method == "POST":
         url = request.POST.get("pdf_url")
-        name = "a"                       # url.split("/")[-1].split(".")[0]
+        name = "a"  # url.split("/")[-1].split(".")[0]
         filename = Path(os.path.join(BASE_DIR) + '/static/files/{}.pdf'.format(name))
 
         if url:
